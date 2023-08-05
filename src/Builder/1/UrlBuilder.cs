@@ -7,10 +7,6 @@ public class UrlBuilder {
 
     public UrlBuilder() {}
 
-    // public string getUrl() {
-    //     return _protocol.toString() + '://' + _hostname.toString() + ":" +  _port.toString();
-    // }
-
     public string getUrl()
     {
         return _protocol?.ToString() +

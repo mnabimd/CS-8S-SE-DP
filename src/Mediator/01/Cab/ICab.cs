@@ -5,5 +5,6 @@ public interface ICab {
     int CurrentLocation { get; }
     bool IsFree { get; }
 
+    // Params: Name => PassengerName, Address => PassengerAddress
     void Assign(string name, string address);
 }

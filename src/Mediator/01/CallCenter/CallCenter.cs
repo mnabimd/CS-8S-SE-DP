@@ -11,7 +11,9 @@ public sealed class CallCenter : ICallCenter
     public void BookCab(IPassenger passenger) {
         foreach (var cab in cabs.Values.Where(c => c.IsFree)) {
             if (isWithin5Miles(cab.CurrentLocation, passenger.Location)) {
+                // Assign passenger to the cab
                 cab.Assign(passenger.Name, passenger.Address);
+                // Acknowledge the passenger
                 passenger.Acknowledge(cab.Name);
                 return;
             }

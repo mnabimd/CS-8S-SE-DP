@@ -57,14 +57,9 @@ public class DinnerMenu : IEnumerator<MenuItem>, IEnumerable<MenuItem> {
         position = 0;
     }
 
-    public IEnumerator<MenuItem> GetEnumerator() {
-        return this;
-    }
-
+    public IEnumerator<MenuItem> GetEnumerator() => this;
     // Now, lets make it enumerable
-    IEnumerator IEnumerable.GetEnumerator() {
-        return GetEnumerator();
-    }
+    IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
     public void Dispose(){
 
